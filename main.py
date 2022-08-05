@@ -25,5 +25,21 @@ pygame.display.set_caption("Betwix Yall")
 pygame.init()
 
 #Loop to keep game running
-while True:
+done  = False #Variable for closing game
+clock = pygame.time.Clock() #FPS counter
+while not done: # Main game loop
+    #Event loop
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            print("User asked to quit")
+            done = True
+    ##### Game logic #####
+
+    ##### Drawing code #####
+    screen.fill(WHITE) #Reset the screen
+    pygame.display.flip() #Update the screen with changes
+    clock.tick (60) #Limit to 60 frames per second 
+    
     pygame.display.update()
+    
+pygame.quit()
