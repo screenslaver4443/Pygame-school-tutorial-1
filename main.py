@@ -30,12 +30,12 @@ clock = pygame.time.Clock() #FPS counter
 while not done: # Main game loop
     #Event loop
     for event in pygame.event.get():
-        if event.type == pygame.QUIT:
+        if event.type == pygame.QUIT: #Closes Game
             print("User asked to quit")
             done = True
-        if event.type == pygame.KEYDOWN:
+        if event.type == pygame.KEYDOWN: #logs when person clicks key
             print('User pressed a key')
-        if event.type == pygame.KEYUP:
+        if event.type == pygame.KEYUP: #
             print('User let go of a key')
         if event.type == pygame.MOUSEBUTTONDOWN:
             print("User clicked the mouse")
@@ -43,6 +43,10 @@ while not done: # Main game loop
 
     ##### Drawing code #####
     screen.fill(WHITE) #Reset the screen
+    
+    pygame.draw.line(screen, TEAL, [0, 0], [100, 100], 5) # Early Line
+    
     pygame.display.flip() #Update the screen with changes
+    
     clock.tick (60) #Limit to 60 frames per second     
 pygame.quit()
