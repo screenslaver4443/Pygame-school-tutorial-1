@@ -55,8 +55,14 @@ while not done:  # Main game loop
     #     pygame.draw.line(screen, RED, [(i*10), 100], (i*10+10, 100))
     #     pygame.draw.line(screen, RED, [(i*10+5), 95], (i*10+5, 105))
 
-    for i in range(0,4):
-        pygame.draw.rect(screen, BLACK, [20+(i*10), 20+(i*10), (250-(i*20)), (250-(i*20))], 2)    
+    # for i in range(0,4): #Draws Rectangle
+    #     pygame.draw.rect(screen, BLACK, [20+(i*10), 20+(i*10), (250-(i*20)), (250-(i*20))], 2)    
+    
+    ##Olympic rings##
+    pygame.draw.ellipse(screen, BLUE, [100, 100, 200, 200], 10) #Blue Ring
+    pygame.draw.ellipse(screen, BLACK, [310, 100, 200, 200], 10) #Black Ring
+    pygame.draw.ellipse(screen, RED, [520, 100, 200, 200], 10) #Red Ring
+    
     pygame.display.flip()  # Update the screen with changes
 
     clock.tick(60)  # Limit to 60 frames per second
