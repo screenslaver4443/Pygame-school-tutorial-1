@@ -18,6 +18,7 @@ RED = (255, 0, 0)
 GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)
 TEAL = (0, 255, 255)
+YELLOW = (255, 255, 0)
 
 # Window Settings
 size = (1280, 720)
@@ -62,6 +63,8 @@ while not done:  # Main game loop
     pygame.draw.ellipse(screen, BLUE, [100, 100, 200, 200], 10) #Blue Ring
     pygame.draw.ellipse(screen, BLACK, [310, 100, 200, 200], 10) #Black Ring
     pygame.draw.ellipse(screen, RED, [520, 100, 200, 200], 10) #Red Ring
+    pygame.draw.ellipse(screen, YELLOW, [205, 200, 200, 200], 10) #Yellow Ring
+    pygame.draw.ellipse(screen, GREEN, [415, 200, 200, 200], 10) #Green Ring
     
     pygame.display.flip()  # Update the screen with changes
 
