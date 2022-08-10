@@ -56,7 +56,7 @@ while not done:  # Main game loop
     #     pygame.draw.line(screen, RED, [(i*10+5), 95], (i*10+5, 105))
 
     for i in range(0,4):
-        pygame.draw.rect(screen, BLACK, [20+(i*10), 20+(i*10), (250-(i*10)), (250-(i*10))], 2)    
+        pygame.draw.rect(screen, BLACK, [20+(i*10), 20+(i*10), (250-(i*20)), (250-(i*20))], 2)    
     pygame.display.flip()  # Update the screen with changes
 
     clock.tick(60)  # Limit to 60 frames per second
