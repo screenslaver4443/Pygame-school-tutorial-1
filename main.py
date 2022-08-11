@@ -74,8 +74,8 @@ while not done:  # Main game loop
     # pygame.draw.line(screen, YELLOW, [462, 190], [300, 300], 10)
     # pygame.draw.line(screen, YELLOW, [462, 415], [300, 300], 10)
     
-    ## arrow ##
-    pygame.draw.polygon(screen, BLACK, [(0,400), (200, 200), (400, 400), (200, 100), (0, 400)], 10 )
+    ## Crazy Shape ##
+    pygame.draw.polygon(screen, BLACK, [(0,600), (230, 80), (100, 23), (420, 69), (89, 400)], 100 )
     
     pygame.display.flip()  # Update the screen with changes
 
