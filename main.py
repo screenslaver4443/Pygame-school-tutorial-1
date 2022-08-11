@@ -69,10 +69,13 @@ while not done:  # Main game loop
     # pygame.draw.ellipse(screen, YELLOW, [205, 200, 200, 200], 10) #Yellow Ring
     # pygame.draw.ellipse(screen, GREEN, [415, 200, 200, 200], 10) #Green Ring
     
-    ## Pacman ##
-    pygame.draw.arc(screen, YELLOW, [100, 100, 400, 400], math.radians(35), math.radians(325), 10)
-    pygame.draw.line(screen, YELLOW, [462, 190], [300, 300], 10)
-    pygame.draw.line(screen, YELLOW, [462, 415], [300, 300], 10)
+    # ## Pacman ##
+    # pygame.draw.arc(screen, YELLOW, [100, 100, 400, 400], math.radians(35), math.radians(325), 10)
+    # pygame.draw.line(screen, YELLOW, [462, 190], [300, 300], 10)
+    # pygame.draw.line(screen, YELLOW, [462, 415], [300, 300], 10)
+    
+    ## arrow ##
+    pygame.draw.polygon(screen, BLACK, [(0,400), (200, 200), (400, 400), (200, 100), (0, 400)], 10 )
     
     pygame.display.flip()  # Update the screen with changes
 
