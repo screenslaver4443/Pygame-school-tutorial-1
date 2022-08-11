@@ -6,12 +6,13 @@
 
 # Imports Pygame
 from ast import While
+from pickle import NONE
 import pygame
 
 # Imports Random
 import random
 # Imports math
-import math 
+import math
 
 # Defining Colours
 BLACK = (0, 0, 0)
@@ -26,6 +27,9 @@ YELLOW = (255, 255, 0)
 size = (1280, 720)
 screen = pygame.display.set_mode(size)
 pygame.display.set_caption("Betwix Yall")
+
+# Defining Font:
+font = pygame.font.SysFont(None, 25, True, False)
 
 # Runs the game
 pygame.init()
@@ -47,7 +51,11 @@ while not done:  # Main game loop
             mousepos = pygame.mouse.get_pos()
             print("User clicked the mouse at", mousepos)
     ##### Game logic #####
-
+    num1 = random.randint(1, 1000000000)
+    num2 = random.randint(1, 1000000000)
+    uans = int(input(f"{num1} + {num2} = "))
+    cans = num1 + num2
+    
     ##### Drawing code #####
     screen.fill(WHITE)  # Reset the screen
 
@@ -60,26 +68,30 @@ while not done:  # Main game loop
     #     pygame.draw.line(screen, RED, [(i*10+5), 95], (i*10+5, 105))
 
     # for i in range(0,4): #Draws Rectangle
-    #     pygame.draw.rect(screen, BLACK, [20+(i*10), 20+(i*10), (250-(i*20)), (250-(i*20))], 2)    
-    
+    #     pygame.draw.rect(screen, BLACK, [20+(i*10), 20+(i*10), (250-(i*20)), (250-(i*20))], 2)
+
     ##Easy Olympic rings##
     # pygame.draw.ellipse(screen, BLUE, [100, 100, 200, 200], 10) #Blue Ring
     # pygame.draw.ellipse(screen, BLACK, [310, 100, 200, 200], 10) #Black Ring
     # pygame.draw.ellipse(screen, RED, [520, 100, 200, 200], 10) #Red Ring
     # pygame.draw.ellipse(screen, YELLOW, [205, 200, 200, 200], 10) #Yellow Ring
     # pygame.draw.ellipse(screen, GREEN, [415, 200, 200, 200], 10) #Green Ring
-    
+
     # ## Pacman ##
     # pygame.draw.arc(screen, YELLOW, [100, 100, 400, 400], math.radians(35), math.radians(325), 10)
     # pygame.draw.line(screen, YELLOW, [462, 190], [300, 300], 10)
     # pygame.draw.line(screen, YELLOW, [462, 415], [300, 300], 10)
-    
+
     # ## Crazy Shape ##
     # pygame.draw.polygon(screen, BLACK, [(0,600), (230, 80), (100, 23), (420, 69), (89, 400)], 100 )
-    
+
     # ## arrow ##
     # pygame.draw.polygon(screen, BLACK, [(0,400), (200, 200), (400, 400), (200, 100), (0, 400)], 10 )
-    
+
+    ### TEXT ###
+    #makes text
+    text = font.render("")
+
     pygame.display.flip()  # Update the screen with changes
 
     clock.tick(60)  # Limit to 60 frames per second
