@@ -10,8 +10,8 @@ import pygame
 
 # Imports Random
 import random
-# Imports PI
-from math import pi
+# Imports math
+import math 
 
 # Defining Colours
 BLACK = (0, 0, 0)
@@ -44,7 +44,8 @@ while not done:  # Main game loop
         if event.type == pygame.KEYUP:
             print('User let go of a key')
         if event.type == pygame.MOUSEBUTTONDOWN:
-            print("User clicked the mouse")
+            mousepos = pygame.mouse.get_pos()
+            print("User clicked the mouse at", mousepos)
     ##### Game logic #####
 
     ##### Drawing code #####
@@ -61,14 +62,17 @@ while not done:  # Main game loop
     # for i in range(0,4): #Draws Rectangle
     #     pygame.draw.rect(screen, BLACK, [20+(i*10), 20+(i*10), (250-(i*20)), (250-(i*20))], 2)    
     
-    ##Olympic rings##
+    ##Easy Olympic rings##
     # pygame.draw.ellipse(screen, BLUE, [100, 100, 200, 200], 10) #Blue Ring
     # pygame.draw.ellipse(screen, BLACK, [310, 100, 200, 200], 10) #Black Ring
     # pygame.draw.ellipse(screen, RED, [520, 100, 200, 200], 10) #Red Ring
     # pygame.draw.ellipse(screen, YELLOW, [205, 200, 200, 200], 10) #Yellow Ring
     # pygame.draw.ellipse(screen, GREEN, [415, 200, 200, 200], 10) #Green Ring
     
-    
+    ## Pacman ##
+    pygame.draw.arc(screen, YELLOW, [100, 100, 400, 400], math.radians(35), math.radians(325), 10)
+    pygame.draw.line(screen, YELLOW, [462, 190], [300, 300], 10)
+    pygame.draw.line(screen, YELLOW, [462, 415], [300, 300], 10)
     
     pygame.display.flip()  # Update the screen with changes
 
